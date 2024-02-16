@@ -1,0 +1,14 @@
+# madiphstheming-js:
+#   filter: rjsmin
+#   output: ckanext-madiphstheming/%(version)s-madiphstheming.js
+#   contents:
+#     - js/madiphstheming.js
+#   extra:
+#     preload:
+#       - base/main
+
+# madiphstheming-css:
+#   filter: cssrewrite
+#   output: ckanext-madiphstheming/%(version)s-madiphstheming.css
+#   contents:
+#     - css/madiphstheming.css

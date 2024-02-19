@@ -12,5 +12,9 @@ setup(
             ('**.js', 'javascript', None),
             ('**/templates/**.html', 'ckan', None),
         ],
-    }
+    },
+    entry_points='''
+        [ckan.plugins]
+        madiphs_theme=ckanext.madiphstheming.plugin:MadiphsthemingPlugin
+    '''
 )

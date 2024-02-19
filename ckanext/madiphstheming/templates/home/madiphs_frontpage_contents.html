@@ -1,5 +1,5 @@
 {% set intro = g.site_intro_text %}
-<div role="main" class="hero">
+<div role="main" class="module-feeds">
    <div class="container">
      <div class="row">
        <div class="col-md-4">
@@ -9,27 +9,16 @@
          {% if intro %}
            {{ h.render_markdown(intro) }}
          {% endif %}
+         {% snippet "spatial/snippets/spatial_query.html", default_extent="{ \"type\": \"Polygon\", \"coordinates\": [[[32.48435610572855,-9.054632128778266],[32.48435610572855,-17.27188074931547],[36.008837179890406,-17.27188074931547],[36.008837179890406,-9.054632128778266],[32.48435610572855,-9.054632128778266]]]}" %}
+          {% block stats %}
+            {% snippet 'home/snippets/stats.html' %}
+          {% endblock %}
        </div>
        <div class="col-md-8">
          {% block search %}
            {% snippet 'home/snippets/search.html' %}
         {% endblock %}
-       </div>
-     </div>
-   </div>
- </div>
- <div role="main" class="module-feeds">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-6">
-         {% block promoted %}
-           {% snippet 'home/snippets/promoted.html' %}
-         {% endblock %}
-       </div>
-       <div class="col-md-6">
-         {% block stats %}
-           {% snippet 'home/snippets/stats.html' %}
-         {% endblock %}
+
        </div>
      </div>
    </div>

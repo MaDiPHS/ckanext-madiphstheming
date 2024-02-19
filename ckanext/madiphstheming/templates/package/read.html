@@ -6,6 +6,8 @@
   {% set dataset_extent = h.get_pkg_dict_extra(c.pkg_dict, 'spatial', '') %}
   {% if dataset_extent %}
     {% snippet "spatial/snippets/dataset_map.html", extent=dataset_extent %}
+  {% elif c.pkg_dict.spatial %}
+    {% snippet "spatial/snippets/dataset_map.html", extent=c.pkg_dict.spatial %}
   {% endif %}
 
 {% endblock %}

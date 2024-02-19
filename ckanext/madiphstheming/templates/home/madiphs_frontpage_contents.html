@@ -1,0 +1,36 @@
+{% set intro = g.site_intro_text %}
+<div role="main" class="hero">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-4">
+         <a class="media-image" href="#">
+           <img class="img-fluid" src="{{ h.url_for_static('/base/images/placeholder-420x220.png') }}" alt="Placeholder" />
+         </a>
+         {% if intro %}
+           {{ h.render_markdown(intro) }}
+         {% endif %}
+       </div>
+       <div class="col-md-8">
+         {% block search %}
+           {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+       </div>
+     </div>
+   </div>
+ </div>
+ <div role="main" class="module-feeds">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">
+         {% block promoted %}
+           {% snippet 'home/snippets/promoted.html' %}
+         {% endblock %}
+       </div>
+       <div class="col-md-6">
+         {% block stats %}
+           {% snippet 'home/snippets/stats.html' %}
+         {% endblock %}
+       </div>
+     </div>
+   </div>
+ </div>

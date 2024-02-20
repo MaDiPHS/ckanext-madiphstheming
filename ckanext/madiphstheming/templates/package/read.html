@@ -2,12 +2,17 @@
 {% block primary_content_inner %}
 
   {{ super() }}
-
+  {# This checks if an "extra" field called 'spatial' is set. 
+  This is ckanex-spatials normal way of doing things #}
   {% set dataset_extent = h.get_pkg_dict_extra(c.pkg_dict, 'spatial', '') %}
   {% if dataset_extent %}
     {% snippet "spatial/snippets/dataset_map.html", extent=dataset_extent %}
+  {# In our dataschema we have included the spatial field and set it to be 
+    a Json type object. Thus we both need to check it in the c.pkg_dict directly
+    and we must dump the Json object to string to avoid quote character confusion
+  #}
   {% elif c.pkg_dict.spatial %}
-    {% snippet "spatial/snippets/dataset_map.html", extent=c.pkg_dict.spatial %}
+    {% snippet "spatial/snippets/dataset_map.html", extent=h.dump_json(c.pkg_dict.spatial) %}
   {% endif %}
 
 {% endblock %}

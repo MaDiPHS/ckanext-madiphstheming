@@ -3,8 +3,23 @@
 <img src="README_images/MaDiPHS_logo.png" style="height: 200px; padding-bottom: 50px;"/>
 
 # ckanext-madiphstheming
+Last edited 2024-02-20 by Tor-Einar Skog
 
-This extension contains the UI modifications for [https://ckan.madiphs.org](https://ckan.madiphs.org)
+This extension contains the UI modifications for [https://ckan.madiphs.org](https://ckan.madiphs.org). We have been using [This guide](https://docs.ckan.org/en/2.10/theming/templates.html) to create it.
+
+## Frontpage modifications
+The main file in the ckanext-madiphstheming plugin is `ckanext/madiphstheming/templates/home/madiphs_frontpage_contents.html` . Here we control what’s inside the `{% block primary_content %}` of the `index.html` template.
+
+## Modifications of the dataset view
+To display a map showing the spatial extent of the dataset (illustrated below), we have modified the template for rendering
+the dataset view.
+
+The modification relies on the ckanext-spatial plugin and its support for a field in the dataset by convention called "spatial". Since we have a "spatial" field in our own schemas, we have had to add support for that too.
+
+See the read.html file
+
+
+<img src="README_images/templates_package_01.png" style="height: 800px; padding-bottom: 50px;"/>
 
 
 ## Requirements
@@ -16,12 +31,10 @@ Compatibility with core CKAN versions:
 | 2.9 and earlier | not tested    |
 | 2.10            | yes    |
 
+Plugins required:
+* [ckanext-spatial](https://github.com/ckan/ckanext-spatial)
 
 ## Installation
-
-**TODO:** Add any additional install steps to the list below.
-   For example installing any non-Python dependencies or adding any required
-   config settings.
 
 To install ckanext-madiphstheming:
 

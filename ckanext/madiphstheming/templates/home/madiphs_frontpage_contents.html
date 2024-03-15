@@ -11,12 +11,14 @@
           
        </div>
        <div class="col-md-5">
-        <a class="media-image" href="#">
-          <img class="img-fluid" src="{{ h.url_for_static('/main-image-scaled.jpg') }}" alt="Maize field" />
-        </a>
-        {% if intro %}
-          {{ h.render_markdown(intro) }}
-        {% endif %}
+        <div style="position: relative;">
+       <img class="img-fluid" src="{{ h.url_for_static('/main-image-scaled.jpg') }}" alt="Maize field" />
+        <div style="position: absolute; top: 40px; left: 40px; background-color: white; padding: 10px;">
+          {% if intro %}
+            {{ h.render_markdown(intro) }}
+          {% endif %}
+        </div>
+      </div>
         {% block stats %}
         {% snippet 'home/snippets/stats.html' %}
       {% endblock %}

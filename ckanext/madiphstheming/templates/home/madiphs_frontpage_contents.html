@@ -2,7 +2,7 @@
 <div role="main" class="module-feeds">
    <div class="container">
      <div class="row">
-       <div class="col-md-8">
+       <div class="col-md-7">
         {% block search %}
           {% snippet 'home/snippets/search.html' %}
       {% endblock %}
@@ -10,7 +10,7 @@
          {% snippet "spatial/snippets/spatial_query.html", default_extent="{ \"type\": \"Polygon\", \"coordinates\": [[[32.48435610572855,-9.054632128778266],[32.48435610572855,-17.27188074931547],[36.008837179890406,-17.27188074931547],[36.008837179890406,-9.054632128778266],[32.48435610572855,-9.054632128778266]]]}" %}
           
        </div>
-       <div class="col-md-4">
+       <div class="col-md-5">
         <a class="media-image" href="#">
           <img class="img-fluid" src="{{ h.url_for_static('/main-image-scaled.jpg') }}" alt="Maize field" />
         </a>

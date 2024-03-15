@@ -13,7 +13,7 @@
        <div class="col-md-5">
         <div style="position: relative;">
        <img class="img-fluid" src="{{ h.url_for_static('/main-image-scaled.jpg') }}" alt="Maize field" />
-        <div style="position: absolute; top: 40px; left: 40px; background-color: white; padding: 10px;">
+        <div style="position: absolute; bottom: 30px; left: 40px; background-color: white; padding: 10px 10px 0px 15px; font-weight: bold; font-style: italic; opacity: 0.9;">
           {% if intro %}
             {{ h.render_markdown(intro) }}
           {% endif %}

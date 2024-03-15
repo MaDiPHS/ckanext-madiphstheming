@@ -1,10 +1,10 @@
 {% ckan_extends %}
 {% block header_site_navigation_tabs %}
-    <li><a href="https://nibio.no">TEST</a></li>
+    <li><a href="/dataset/">All resources</a>
+    <li><a href="/plant-health-knowledge-dataset/">Datasets</a>
+    <li><a href="/plant-health-knowledge-product/">Knowledge products</a>
     {{ h.build_nav_main(
-        ('search', _('Datasets')),
-        ('organizations.index', _('Organizations')),
-        ('group.index', _('Groups')),
+        ('organization.index', _('Organizations')),
         ('home.about', _('About'))
         ) 
     }}

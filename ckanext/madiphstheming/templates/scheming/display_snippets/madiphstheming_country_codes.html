@@ -13,10 +13,9 @@
     {%- if field.get('sorted_choices') -%}
         {%- set labels = labels|sort -%}
     {%- endif -%}
-    <pre>{{ ",".join(labels)}}</pre>
-    <ul>
-    {%- for label in labels -%}
-       <li>{{ label }}</li>
-    {%- endfor -%}
-    </ul>
+    {%- if "Malawi" in labels -%}
+      {%- do labels.remove("Malawi") -%}
+      {%- do labels.insert(0,"Malawi") -%}
+    {%- endif -%}
+    {{ ", ".join(labels)}}
 {%- endif -%}

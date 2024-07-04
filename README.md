@@ -11,6 +11,7 @@ This extension contains the UI modifications for [https://ckan.madiphs.org](http
 The main file in the ckanext-madiphstheming plugin is `ckanext/madiphstheming/templates/home/madiphs_frontpage_contents.html` . Here we control what’s inside the `{% block primary_content %}` of the `index.html` template.
 
 ## Modifications of the dataset view
+### Map for spatial extent
 To display a map showing the spatial extent of the dataset (illustrated below), we have modified the template for rendering
 the dataset view.
 
@@ -21,6 +22,16 @@ See the read.html file
 
 <img src="README_images/templates_package_01.png" style="height: 800px; padding-bottom: 50px;"/>
 
+### GeoJson view template
+
+For the area covered property of the datasets, a long GeoJson text is to be displayed. To make the field scrollable, a display snippet `ckanext/templates/scheming/display_snippets/madiphsteaming_geojson.html` has been created. It is referenced in the [CKAN-Metadata schema file for factsheets](https://github.com/MaDiPHS/CKAN-Metadata/blob/main/ckanext-scheming/factsheets-schema.yaml)
+
+<img src="README_images/geojson.png" />
+
+### Countries covered template
+To display the countries more space efficiently, a display snippet `ckanext/templates/scheming/display_snippets/madiphsteaming_country_codes.html` has been created. It is referenced in the [CKAN-Metadata schema file for factsheets](https://github.com/MaDiPHS/CKAN-Metadata/blob/main/ckanext-scheming/factsheets-schema.yaml)
+
+
 
 ## Requirements
 
@@ -29,7 +40,7 @@ Compatibility with core CKAN versions:
 | CKAN version    | Compatible?   |
 | --------------- | ------------- |
 | 2.9 and earlier | not tested    |
-| 2.10            | yes    |
+| 2.10            | yes           |
 
 Plugins required:
 * [ckanext-spatial](https://github.com/ckan/ckanext-spatial)

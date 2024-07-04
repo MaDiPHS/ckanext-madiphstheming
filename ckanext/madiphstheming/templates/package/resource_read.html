@@ -1,4 +1,4 @@
-{% extends "package/resource_read.html" %}
+{% ckan_extends %}
 
 {% block resource_read_url %}
     {% if res.url and h.is_url(res.url) %}

@@ -17,9 +17,14 @@
       {% set text_no_query = ungettext('{number} dataset found', '{number} datasets found', count) %}
       {% set text_no_query_none = _('No datasets found') %}
     {% elif type == 'plant-health-knowledge-product' %}
-        {% set text_query = ungettext('{number} TEST found for "{query}"', '{number} TEST2 found for "{query}"', count) %}
+        {% set text_query = ungettext('{number} plant health knowledge product found for "{query}"', '{number} plant health knowledge products found for "{query}"', count) %}
         {% set text_query_none = _('No datasets found for "{query}"') %}
-        {% set text_no_query = ungettext('{number} dataset found', '{number} datasets found', count) %}
+        {% set text_no_query = ungettext('{number} plant health knowledge product found', '{number} plant health knowledge products found', count) %}
+        {% set text_no_query_none = _('No datasets found') %}
+    {% elif type == 'plant-health-dataset' %}
+        {% set text_query = ungettext('{number} plant health dataset found for "{query}"', '{number} plant health datasets found for "{query}"', count) %}
+        {% set text_query_none = _('No datasets found for "{query}"') %}
+        {% set text_no_query = ungettext('{number} plant health dataset found', '{number} plant health datasets found', count) %}
         {% set text_no_query_none = _('No datasets found') %}
     {% elif type == 'group' %}
       {% set text_query = ungettext('{number} group found for "{query}"', '{number} groups found for "{query}"', count) %}

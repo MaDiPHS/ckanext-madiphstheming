@@ -33,7 +33,8 @@ To display the countries more space efficiently, a display snippet `ckanext/temp
 
 <img src="README_images/country_codes_snippet.png" />
 
-
+### Open resource URLs in new window from resource page
+On the resource view page, the links to the external resource opens in the same window by default. To change this, we have overridden the `ckanext/templates/package/resource_read.html` template.
 
 ## Requirements
 

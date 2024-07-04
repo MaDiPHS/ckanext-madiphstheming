@@ -8,6 +8,7 @@
     {% endif %}
 {% endblock %}
 
+<!-- THIS IS THE ONLY CHANGE: In the button URL, target="new" -->
 {% block resource_actions_inner %}
                  {% block action_manage %}
                    {% if h.check_access('package_update', {'id':pkg.id }) %}

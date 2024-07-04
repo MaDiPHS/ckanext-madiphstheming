@@ -33,6 +33,9 @@ To display the countries more space efficiently, a display snippet `ckanext/temp
 
 <img src="README_images/country_codes_snippet.png" />
 
+### Avoid the slugged name of our dataset types
+By default in the search page, the heading is something like this "[X] plant-health-knowledge-products found". We have fixed the slugging by overriding the `ckanext/templates/snippets/search_result_text.html` template.
+
 ### Open resource URLs in new window from resource page
 On the resource view page, the links to the external resource opens in the same window by default. To change this, we have overridden the `ckanext/templates/package/resource_read.html` template.
 

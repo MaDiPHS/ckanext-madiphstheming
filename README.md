@@ -3,7 +3,7 @@
 <img src="README_images/MaDiPHS_logo.png" style="height: 200px; padding-bottom: 50px;"/>
 
 # ckanext-madiphstheming
-Last edited 2024-02-20 by Tor-Einar Skog
+Last edited 2024-07-04 by Tor-Einar Skog
 
 This extension contains the UI modifications for [https://ckan.madiphs.org](https://ckan.madiphs.org). We have been using [This guide](https://docs.ckan.org/en/2.10/theming/templates.html) to create it.
 
@@ -30,6 +30,8 @@ For the area covered property of the datasets, a long GeoJson text is to be disp
 
 ### Countries covered template
 To display the countries more space efficiently, a display snippet `ckanext/templates/scheming/display_snippets/madiphsteaming_country_codes.html` has been created. It is referenced in the [CKAN-Metadata schema file for factsheets](https://github.com/MaDiPHS/CKAN-Metadata/blob/main/ckanext-scheming/factsheets-schema.yaml)
+
+<img src="README_images/country_codes_snippet.png" />
 
 
 
